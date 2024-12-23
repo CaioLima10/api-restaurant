@@ -7,6 +7,8 @@ const PORT = 4000
 const app = express()
 app.use(express.json())
 
+app.use(routes)
+
 app.use(errorHandline)
 
 app.listen(PORT, () => console.log(`Server is running on port ${PORT}`))  
