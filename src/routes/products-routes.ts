@@ -3,9 +3,11 @@ import { Router } from "express";
 
 const ProductsRoutes = Router()
 
-const productsControler = new ProductsController()
+const productsController = new ProductsController()
 
-ProductsRoutes.get("/", productsControler.index)
-ProductsRoutes.post("/", productsControler.create)
+ProductsRoutes.get("/", productsController.index)
+ProductsRoutes.post("/", productsController.create)
+ProductsRoutes.put("/:id", productsController.update)
+ProductsRoutes.delete("/:id", productsController.remove)
 
 export { ProductsRoutes }
