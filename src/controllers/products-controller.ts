@@ -5,8 +5,6 @@ import z from "zod"
 
 import { knex } from "../knex"
 
-
-// os metodos do controller
 class ProductsController {
   async index(request: Request, response: Response, next: NextFunction) {
     try {
